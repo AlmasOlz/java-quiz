@@ -1154,6 +1154,442 @@ java: [
             "Процессор ядроларының санына тең"
         ],
         correct: 0
+    },
+    {
+        question: "Java-да String класының объектілері қандай қасиетке ие?",
+        options: ["Өзгермелі (Mutable)", "Өзгермейтін (Immutable)", "Абстрактілі", "Статикалық", "Синхрондалған"],
+        correct: 1
+    },
+    {
+        question: "Жолды құрудың қай тәсілі «String Pool» (жолдар пулы) мүмкіндігін қолданады?",
+        options: [
+            "String s = new String(\"Hello\");",
+            "String s = \"Hello\"; (Литерал арқылы)",
+            "String s = String.valueOf(\"Hello\");",
+            "StringBuilder s = new StringBuilder(\"Hello\");",
+            "String s = String.create(\"Hello\");"
+        ],
+        correct: 1
+    },
+    {
+        question: "Екі жолдың мазмұнын салыстыру үшін қай әдіс қолданылады?",
+        options: ["==", "compare()", "equals()", "check()", "match()"],
+        correct: 2
+    },
+    {
+        question: "String класы қай интерфейсті жүзеге асырмайды?",
+        options: ["Serializable", "Comparable", "CharSequence", "Runnable", "Constable (жаңа нұсқаларда)"],
+        correct: 3
+    },
+    {
+        question: "String s = \"Java\"; s.concat(\"SE\"); System.out.println(s); коды не шығарады?",
+        options: ["\"JavaSE\"", "\"Java SE\"", "\"Java\"", "\"SE\"", "Қате береді"],
+        correct: 2
+    },
+    {
+        question: "StringBuffer класының StringBuilder-ден негізгі айырмашылығы?",
+        options: [
+            "StringBuffer жылдамырақ",
+            "StringBuffer әдістері синхрондалған (thread-safe)",
+            "StringBuilder ескірген",
+            "Айырмашылығы жоқ",
+            "StringBuffer мұралана алмайды"
+        ],
+        correct: 1
+    },
+    {
+        question: "Жолдың ұзындығын алу үшін қай әдіс қолданылады?",
+        options: ["length (өріс ретінде)", "size()", "length() (әдіс ретінде)", "getSize()", "count()"],
+        correct: 2
+    },
+    {
+        question: "Жолдағы белгілі бір индекстегі символды алу әдісі?",
+        options: ["getChar(int index)", "charAt(int index)", "char(int index)", "indexOf(int index)", "symbolAt(int index)"],
+        correct: 1
+    },
+    {
+        question: "intern() әдісі не үшін қолданылады?",
+        options: [
+            "Жолды пулға қосу немесе пулдан сілтемені қайтару үшін",
+            "Жолды өшіру үшін",
+            "Жолды бөлу үшін",
+            "Жолды басқа тілге аудару үшін",
+            "Интернетке қосылу үшін"
+        ],
+        correct: 0
+    },
+    {
+        question: "Жолды бөлшектеу (мысалы, пробел арқылы бөлу) үшін қай әдіс қолданылады?",
+        options: ["slice()", "split()", "divide()", "cut()", "break()"],
+        correct: 1
+    },
+    {
+        question: "StringBuilder класында жолды кері айналдыратын әдіс?",
+        options: ["invert()", "reverse()", "back()", "flip()", "rotate()"],
+        correct: 1
+    },
+    {
+        question: "String класының substring(int beginIndex, int endIndex) әдісінде endIndex кіре ме?",
+        options: [
+            "Иә, кіреді",
+            "Жоқ, кірмейді (exclusive)",
+            "Кейде кіреді",
+            "Тек соңғы символ болса кіреді",
+            "Ондай әдіс жоқ"
+        ],
+        correct: 1
+    },
+    {
+        question: "Жолдың басындағы және соңындағы бос орындарды алып тастайтын әдіс?",
+        options: [
+            "deleteWhitespace()",
+            "strip() немесе trim()",
+            "clean()",
+            "cutEdges()",
+            "removeSpaces()"
+        ],
+        correct: 1
+    },
+    {
+        question: "Тұрақты өрнектермен (Regex) жұмыс істеу үшін қай пакет қолданылады?",
+        options: ["java.io", "java.util.regex", "java.text", "java.lang", "java.net"],
+        correct: 1
+    },
+    {
+        question: "Regex-те кез келген цифрды білдіретін метасимвол?",
+        options: ["\\d", "\\w", "\\s", "\\D", "."],
+        correct: 0
+    },
+    {
+        question: "matches() әдісі не қайтарады?",
+        options: [
+            "Сәйкес келетін жолды",
+            "Сәйкестік санын",
+            "boolean (сәйкес келсе true, болмаса false)",
+            "int (индексін)",
+            "void"
+        ],
+        correct: 2
+    },
+    {
+        question: "Pattern класының данасын (объектісін) қалай құрамыз?",
+        options: [
+            "new Pattern(\"regex\")",
+            "Pattern.compile(\"regex\")",
+            "Pattern.create(\"regex\")",
+            "Pattern.matcher(\"regex\")",
+            "Regex.new(\"regex\")"
+        ],
+        correct: 1
+    },
+    {
+        question: "Regex-те «+» квантификаторы нені білдіреді?",
+        options: ["0 немесе одан көп", "1 немесе одан көп", "Тек 1 рет", "0 немесе 1 рет", "5 рет"],
+        correct: 1
+    },
+    {
+        question: "String.format() әдісі не үшін қажет?",
+        options: [
+            "Жолды өшіру үшін",
+            "Жолды форматтап, жаңа жол қайтару үшін (C тіліндегі printf сияқты)",
+            "Жолды консольге шығару үшін",
+            "Жолды кодтау үшін",
+            "Жолды файлға жазу үшін"
+        ],
+        correct: 1
+    },
+    {
+        question: "compareTo() әдісі екі жол тең болса не қайтарады?",
+        options: ["1", "-1", "0", "true", "null"],
+        correct: 2
+    },
+    {
+        question: "Жолдың бос екенін тексеру үшін ең тиімді әдіс?",
+        options: [
+            "str.equals(\"\")",
+            "str.length() == 0 немесе isEmpty()",
+            "str == null",
+            "str.contains(\"\")",
+            "str.matches(\"\")"
+        ],
+        correct: 1
+    },
+    {
+        question: "indexOf() әдісі ізделінді символ табылмаса не қайтарады?",
+        options: ["0", "null", "-1", "Ерекше жағдай лақтырады", "false"],
+        correct: 2
+    },
+    {
+        question: "StringBuilder класының бастапқы сыйымдылығы (default capacity) қанша?",
+        options: ["0", "10", "16", "32", "256"],
+        correct: 2
+    },
+    {
+        question: "Regex-те «.» (нүкте) нені білдіреді?",
+        options: [
+            "Тек нүктені",
+            "Кез келген символды (жаңа жолдан басқа)",
+            "Тек әріптерді",
+            "Тек сандарды",
+            "Бос орынды"
+        ],
+        correct: 1
+    },
+    {
+        question: "Жолды басқа регистрге (жоғарғы/төменгі) ауыстыратын әдістер?",
+        options: [
+            "toUp(), toDown()",
+            "toUpperCase(), toLowerCase()",
+            "changeCase()",
+            "setUpperCase()",
+            "switchCase()"
+        ],
+        correct: 1
+    },
+    {
+        question: "String класы final ма?",
+        options: [
+            "Иә, одан мұра алуға болмайды",
+            "Жоқ, мұра алуға болады",
+            "Тек кейбір әдістері final",
+            "Java нұсқасына байланысты",
+            "Абстрактілі класс"
+        ],
+        correct: 0
+    },
+    {
+        question: "join() әдісі (Java 8+) не істейді?",
+        options: [
+            "Екі жолды біріктіреді",
+            "Берілген бөлгіш (delimiter) арқылы массив элементтерін бір жолға біріктіреді",
+            "Ағындарды біріктіреді",
+            "Жолды бөледі",
+            "Жолды тазалайды"
+        ],
+        correct: 1
+    },
+    {
+        question: "startsWith() әдісі не тексереді?",
+        options: [
+            "Жолдың санмен басталатынын",
+            "Жолдың көрсетілген префикспен басталатынын",
+            "Жолдың бос еместігін",
+            "Жолдың бас әріппен басталатынын",
+            "Жолдың ұзындығын"
+        ],
+        correct: 1
+    },
+    {
+        question: "char[] массивін String-ге айналдыру үшін?",
+        options: [
+            "new String(charArray)",
+            "charArray.toString()",
+            "String.valueOf(charArray)",
+            "A және C дұрыс",
+            "Тек B дұрыс"
+        ],
+        correct: 3
+    },
+    {
+        question: "Regex-те [abc] нені білдіреді?",
+        options: [
+            "a, b және c әріптерінің тіркесін",
+            "a, b немесе c символдарының біреуін",
+            "abc сөзін",
+            "a-дан c-ға дейінгі барлық символдарды",
+            "a, b, c емес символдарды"
+        ],
+        correct: 1
+    },
+    {
+        question: "replace() және replaceAll() айырмашылығы?",
+        options: [
+            "Ешқандай айырмашылық жоқ",
+            "replaceAll регулярлы өрнектерді (Regex) қолдайды, replace тек литералдарды ауыстырады",
+            "replace барлығын ауыстырады, replaceAll тек біріншісін",
+            "replace ескірген",
+            "replaceAll баяу жұмыс істейді"
+        ],
+        correct: 1
+    },
+    {
+        question: "Matcher класының find() әдісі не істейді?",
+        options: [
+            "Жолдың басынан бастап толық сәйкестікті тексереді",
+            "Жолдан шаблонға сәйкес келетін келесі ішкі тізбекті іздейді",
+            "Жолды бөледі",
+            "Іздеуді тоқтатады",
+            "Индексті қайтарады"
+        ],
+        correct: 1
+    },
+    {
+        question: "Pattern.CASE_INSENSITIVE жалаушасы (flag) не үшін қажет?",
+        options: [
+            "Іздеу кезінде регистрді (үлкен-кіші әріп) елемеу үшін",
+            "Тек бас әріптерді іздеу үшін",
+            "Жолды жылдам оқу үшін",
+            "Қателерді елемеу үшін",
+            "Unicode символдарды қолдау үшін"
+        ],
+        correct: 0
+    },
+    {
+        question: "String s = \"123\"; int i = Integer.parseInt(s); коды не істейді?",
+        options: [
+            "Жолды санға айналдырады",
+            "Санды жолға айналдырады",
+            "Қате береді",
+            "Жолды массивке айналдырады",
+            "Жаңа объект құрады"
+        ],
+        correct: 0
+    },
+    {
+        question: "StringBuilder объектісіне жаңа дерек қосу үшін қай әдіс қолданылады?",
+        options: ["add()", "append()", "put()", "concat()", "plus()"],
+        correct: 1
+    },
+    {
+        question: "Егер цикл ішінде көп жолдарды біріктіру (конкатенация) керек болса, нені қолданған дұрыс?",
+        options: [
+            "+ операторын",
+            "String.concat()",
+            "StringBuilder немесе StringBuffer",
+            "Arrays.toString()",
+            "Matcher"
+        ],
+        correct: 2
+    },
+    {
+        question: "String объектісі жадтың қай бөлігінде сақталады (Pool)?",
+        options: ["Stack", "Heap (String Pool)", "PermGen", "Metaspace", "Register"],
+        correct: 1
+    },
+    {
+        question: "Regex-те \\s нені білдіреді?",
+        options: [
+            "Әріпті",
+            "Санды",
+            "Бос орын символын (whitespace: пробел, табуляция, т.б.)",
+            "Арнайы символды",
+            "Жолдың соңын"
+        ],
+        correct: 2
+    },
+    {
+        question: "regionMatches() әдісі не үшін қолданылады?",
+        options: [
+            "Екі жолдың белгілі бір бөліктерін (аймақтарын) салыстыру үшін",
+            "Жолды аймақтарға бөлу үшін",
+            "IP мекенжайларды салыстыру үшін",
+            "Жолдың тілін анықтау үшін",
+            "Регистрді өзгерту үшін"
+        ],
+        correct: 0
+    },
+    {
+        question: "StringTokenizer класы қазіргі уақытта қандай статусқа ие?",
+        options: [
+            "Ұсынылатын негізгі класс",
+            "Ескірген (Legacy), орнына split немесе Scanner қолдану ұсынылады",
+            "Жаңа класс",
+            "Тек XML үшін қолданылады",
+            "Жойылған"
+        ],
+        correct: 1
+    },
+    {
+        question: "Pattern.compile() әдісі не қайтарады?",
+        options: ["String", "Matcher", "Pattern объектісін", "boolean", "int"],
+        correct: 2
+    },
+    {
+        question: "Жолды байт массивіне айналдыру әдісі?",
+        options: ["toBytes()", "getBytes()", "toCharArray()", "codePoints()", "binary()"],
+        correct: 1
+    },
+    {
+        question: "Regex-те ^ және $ символдары нені білдіреді?",
+        options: [
+            "Жолдың басы мен соңын",
+            "Қосу мен алуды",
+            "Және мен немесе амалдарын",
+            "Көбейтуді",
+            "Арнайы символдарды жоққа шығаруды"
+        ],
+        correct: 0
+    },
+    {
+        question: "CharSequence интерфейсін жүзеге асыратын кластар?",
+        options: [
+            "Тек String",
+            "String, StringBuilder, StringBuffer, CharBuffer",
+            "Тек StringBuilder",
+            "List, Set",
+            "Reader, Writer"
+        ],
+        correct: 1
+    },
+    {
+        question: "trim() әдісі ASCII коды қаншадан кіші символдарды алып тастайды?",
+        options: [
+            "32 (' ' - пробел) және одан кіші басқарушы символдарды",
+            "Тек 0-ді",
+            "Барлық сандарды",
+            "Тек әріптерді",
+            "128-ден кіші"
+        ],
+        correct: 0
+    },
+    {
+        question: "String.valueOf(100) не қайтарады?",
+        options: ["100 санын", "\"100\" жолын", "null", "Қате береді", "100 символын"],
+        correct: 1
+    },
+    {
+        question: "Regex-те ? квантификаторының мағынасы?",
+        options: [
+            "0 немесе 1 рет кездесу",
+            "1 немесе көп",
+            "0 немесе көп",
+            "Дәл 2 рет",
+            "Кез келген рет"
+        ],
+        correct: 0
+    },
+    {
+        question: "Matcher.group() әдісі не үшін қолданылады?",
+        options: [
+            "Табылған ішкі тізбекті (немесе оның тобын) қайтару үшін",
+            "Топтарды санау үшін",
+            "Жаңа топ құру үшін",
+            "Іздеуді бастау үшін",
+            "Қателерді топтау үшін"
+        ],
+        correct: 0
+    },
+    {
+        question: "setLength() әдісі қай класта бар?",
+        options: [
+            "String",
+            "StringBuilder және StringBuffer",
+            "Object",
+            "Math",
+            "System"
+        ],
+        correct: 1
+    },
+    {
+        question: "Егер String s = null; болса, s.length() шақырсақ не болады?",
+        options: [
+            "0 қайтарады",
+            "NullPointerException лақтырады",
+            "-1 қайтарады",
+            "\"null\" қайтарады",
+            "Ештеңе болмайды"
+        ],
+        correct: 1
     }
     ]
 };
